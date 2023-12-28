@@ -13,7 +13,7 @@ file_types = [".c", ".h"]
 def run_clang_format(file_list):
     for file_path in file_list:
         print(f"正在格式化文件：{file_path}")
-        subprocess.call([clang_format_path, "-i", file_path])
+        subprocess.call([clang_format_path, "-i", file_path, "--style=file"])
         print(f"文件格式化完成：{file_path}")
 
 
